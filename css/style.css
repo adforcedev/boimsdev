@@ -1,15 +1,15 @@
 * {
-	padding: 0;
-	margin: 0;
-	outline: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
 }
 
-#wrapper {
-	width: 968px;
-	height: 250px;
-	border: 1px solid black;
-	margin: 0 auto;
-	position: relative;
+#mast-wrapper {
+    width: 968px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
 }
 
 
@@ -21,6 +21,6 @@
     bottom: 5px;
     right: 5px;
     cursor: pointer;
-		background-color: green;
-		z-index: 100;
+    background-color: green;
+    z-index: 100;
 }
