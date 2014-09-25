@@ -9,5 +9,18 @@
 	height: 250px;
 	border: 1px solid black;
 	margin: 0 auto;
+	position: relative;
 }
 
+
+
+#bg-exit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+		background-color: green;
+		z-index: 100;
+}
