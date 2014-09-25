@@ -80,6 +80,9 @@ html {
 select {
 	width: 160px;
 	margin-top: 5px;
+	border: 1px solid #000000;
+	background: #efefef;
+	font-size: 12px;
 }
 
 h3 {
@@ -113,13 +116,13 @@ h3 {
 
 button {
 	cursor: pointer;
-	padding: 10px 25px;
+	padding: 5px 25px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	border: 1px solid black;
+	border: 1px solid #666666;
 	color: white;
 	text-align: center;
 	background-color: #99c309;
-	font-size: 14px;
+	font-size: 18px;
 }
