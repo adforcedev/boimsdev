@@ -35,6 +35,11 @@ html {
 		z-index: 100;
 }
 
+.grey-text {
+	color: #adadad;
+	font-size: 9px;
+}
+
 .content {
 	padding: 10px 0px 10px 0px;
 }
@@ -43,6 +48,7 @@ html {
 	width: 420px;
 	float: left;
 	height: 205px;
+	padding-left: 25px;
 }
 
 .right-side {
@@ -51,6 +57,69 @@ html {
 	height: 205px;
 }
 
+.left-side h3 {
+	display: inline;
+}
+
+.left {
+	float: left;
+}
+
+#my-monthly-rent {
+	clear: both;
+}
+
+#id-like-to-live-in {
+	margin-left: 20px;
+}
+
+.heading {
+	margin-bottom: 15px;
+}
+
+select {
+	width: 160px;
+	margin-top: 5px;
+}
+
 h3 {
 	font-weight: 700;
+}
+
+#vid_container {
+	position: relative;
+}
+
+#vid_border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+}
+
+#video {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+}
+
+.clear {
+	clear: both;
+}
+
+.right {
+	float: right;
+}
+
+button {
+	cursor: pointer;
+	padding: 10px 25px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	text-align: center;
+	background-color: #99c309;
+	font-size: 14px;
 }

@@ -16,14 +16,17 @@
 			<div id="bg-exit"></div> <!-- to be replaced -->
 			
 			<div id="header">
-				<img alt="Mortgage Store" title="Mortgage Store" src="images/header.jpg" />
+				<img alt="Mortgage Store" title="Mortgage Store" src="images/min/header.jpg" />
 			</div> <!-- header -->
 			
 			<div class="content">
 				<div class="left-side">
-					<p><img src="" /> <h3>Mortgage Calculator</h3></p>
+					<div class="left heading">
+						<img src="images/min/calc-icon.png" /> 
+						<h3>Mortgage Calculator</h3>
+					</div>
 
-					<div id="my-monthly-rent">
+					<div id="my-monthly-rent" class="left">
 						<p>My monthly rent is</p>
 						<p>
 							<select id="rent" name="rent">
@@ -59,7 +62,7 @@
 						</p>
 					</div>
 					
-					<div id="id-like-to-live-in">
+					<div id="id-like-to-live-in" class="left">
 						<p>I'd like to live in</p>
 						<select id="Region" name="Region">
 							<option value="">Choose a Location</option>
@@ -123,10 +126,18 @@
 							<option value="4011">Wicklow</option>
 						</select>
 					</div> <!-- id like to live in -->
+					
+					<div class="clear">
+						<button class="right" type="button">Calculate</button>
+						<p class="grey-text">Calculator results are indicative and do not constitute a loan offer.</p>
+					</div>
 				</div> <!-- left side -->
 				
 				<div class="right-side">
-					<iframe width="256" height="140" src="//www.youtube.com/embed/9zwweNfAhvE" frameborder="0" allowfullscreen></iframe>
+					<div id="vid_container">
+						<img src="images/min/video-border.png">
+						<iframe id="video" width="254" height="138" src="//www.youtube.com/embed/9zwweNfAhvE" frameborder="0" allowfullscreen></iframe>
+					</div>
 				</div> <!-- right side -->
 			</div>
 			
