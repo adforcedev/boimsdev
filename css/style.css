@@ -13,12 +13,13 @@ html {
 	font-weight: 400;
 }
 
-#wrapper {
-	width: 970px;
-	height: 250px;
-	border: 1px solid black;
-	margin: 0 auto;
-	position: relative;
+
+#mast-wrapper {
+    width: 970px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
 }
 
 
