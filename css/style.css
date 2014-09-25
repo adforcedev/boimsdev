@@ -39,13 +39,13 @@ html {
 	padding: 10px 0px 10px 0px;
 }
 
-.left_side {
+.left-side {
 	width: 420px;
 	float: left;
 	height: 205px;
 }
 
-.right_side {
+.right-side {
 	width: 548px;
 	float: right;
 	height: 205px;
