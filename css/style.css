@@ -1,11 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	outline: none;
+	font-family: 'Lato';
+	font-weight: 400;
 }
 
 #wrapper {
-	width: 968px;
+	width: 970px;
 	height: 250px;
 	border: 1px solid black;
 	margin: 0 auto;
@@ -23,4 +32,24 @@
     cursor: pointer;
 		background-color: green;
 		z-index: 100;
+}
+
+.content {
+	padding: 10px 0px 10px 0px;
+}
+
+.left_side {
+	width: 420px;
+	float: left;
+	height: 205px;
+}
+
+.right_side {
+	width: 548px;
+	float: right;
+	height: 205px;
+}
+
+h3 {
+	font-weight: 700;
 }

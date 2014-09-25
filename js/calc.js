@@ -22,6 +22,11 @@ pageLoadedHandler);
 
 function pageLoadedHandler() {
     // Load in additional assets or add animation/video
+		var fileref=document.createElement("link");
+		var filename = 'http://fonts.googleapis.com/css?family=Lato:400,700';
+		fileref.setAttribute("rel", "stylesheet");
+		fileref.setAttribute("type", "text/css");
+		fileref.setAttribute("href", filename);
 }
 
 
