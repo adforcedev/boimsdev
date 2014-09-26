@@ -180,9 +180,6 @@ function enablerInitHandler() {
 
         var rent, area;
 
-        // Hide the results display initially
-        $('#calculator-results').hide();
-
         // Activate the calculate button when both fields have values
         $('#select-rent, #select-area').change(function() {
             rent = $('#select-rent').val();
@@ -223,8 +220,8 @@ function enablerInitHandler() {
                         $('#properties ul').append('<a href="' + prop_url + prop.PropertyID + '"><img src="' + prop.MainPhotoUrl +'" /><span class="property_view">View</span><span class="property_price">' + prop.Price + '</span></a>');
                     });
 
-                    $('#calculator-form').fadeOut(function() {
-                        $('#calculator-results').fadeIn();
+                    $('.hide-after').fadeOut(function() {
+                        $('.hide-before').fadeIn();
                     });
 
                 });
@@ -234,9 +231,9 @@ function enablerInitHandler() {
 
         // Switch back to calculation form when user clicks #recalculate
         $('#recalculate').click(function() {
-            $('#calculator-results').fadeOut(function() {
+            $('.hide-before').fadeOut(function() {
                 $('#properties ul').html('');
-                $('#calculator-form').fadeIn();
+                $('.hide-after').fadeIn();
             });
         });
 

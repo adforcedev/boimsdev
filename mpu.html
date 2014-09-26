@@ -18,7 +18,7 @@
 				<img alt="Mortgage Store" title="Mortgage Store" src="images_mpu/header.jpg" />
 			</div> <!-- header -->
 
-			<div id="calculator-form">
+			<div id="calculator-form" class="hide-after">
 
 				<label for="select-rent">My monthly rent is</label>
 				<select id="select-rent">
@@ -54,7 +54,7 @@
 				</select>
 
 				<label for="select-area">I'd like to live in</label>
-				<select id="select-area" name="select-area"><option value="">Choose a County</option>
+				<select id="select-area" name="select-area"><option value="">Choose an area</option>
 					<option value="1080">Carlow</option>
 					<option value="887">Cavan</option>
 					<option value="618">Clare</option>
@@ -115,11 +115,11 @@
 					<option value="4011">Wicklow</option>
 				</select>
 
-				<button type="submit" id="calculate" disabled class="disabled">Calculate</button>
+				<button id="calculate" disabled class="disabled">Calculate</button>
 
 			</div>
 
-			<div id="calculator-results">
+			<div id="calculator-results" class="hide-before">
 
 				<strong>Property Value:</strong> <span id="property-value"></span><br />
 				<strong>Mortgage Value:</strong> <span id="mortgage-value"></span><br />
