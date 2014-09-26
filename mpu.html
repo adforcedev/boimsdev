@@ -1,146 +1,146 @@
 <html>
 
-    <head>
-        <title>Mortgage Store</title>
+	<head>
+		<title>Mortgage Store</title>
 
-        <link href="css/min/minified.css" type="text/css" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-    </head>
-
-
-    <body>
-
-        <div id="mpu-wrapper">
-
-            <div id="bg-exit"></div> <!-- to be replaced -->
-
-            <div id="header">
-                <img alt="Mortgage Store" title="Mortgage Store" src="images_mpu/header.jpg" />
-            </div> <!-- header -->
-
-            <div id="calculator-form">
-
-                <label for="select-rent">My monthly rent is</label>
-                <select id="select-rent">
-                    <option>Select an amount</option>
-                    <option value="300">&euro;300</option>
-                    <option value="400">&euro;400</option>
-                    <option value="500">&euro;500</option>
-                    <option value="600">&euro;600</option>
-                    <option value="700">&euro;700</option>
-                    <option value="800">&euro;800</option>
-                    <option value="900">&euro;900</option>
-                    <option value="1000">&euro;1,000</option>
-                    <option value="1100">&euro;1,100</option>
-                    <option value="1200">&euro;1,200</option>
-                    <option value="1300">&euro;1,300</option>
-                    <option value="1400">&euro;1,400</option>
-                    <option value="1500">&euro;1,500</option>
-                    <option value="1600">&euro;1,600</option>
-                    <option value="1700">&euro;1,700</option>
-                    <option value="1800">&euro;1,800</option>
-                    <option value="1900">&euro;1,900</option>
-                    <option value="2000">&euro;2,000</option>
-                    <option value="2100">&euro;2,100</option>
-                    <option value="2200">&euro;2,200</option>
-                    <option value="2300">&euro;2,300</option>
-                    <option value="2400">&euro;2,400</option>
-                    <option value="2500">&euro;2,500</option>
-                    <option value="2600">&euro;2,600</option>
-                    <option value="2700">&euro;2,700</option>
-                    <option value="2800">&euro;2,800</option>
-                    <option value="2900">&euro;2,900</option>
-                    <option value="3000">&euro;3,000</option>
-                </select>
-
-                <label for="select-area">I'd like to live in</label>
-                <select id="select-area" name="select-area"><option value="">Choose a County</option>
-                    <option value="1080">Carlow</option>
-                    <option value="887">Cavan</option>
-                    <option value="618">Clare</option>
-                    <option value="737">Cork</option>
-                    <option value="769"> -- Cork City</option>
-                    <option value="4243"> -- Cork West</option>
-                    <option value="1464">Donegal</option>
-                    <option value="1265">Dublin</option>
-                    <option value="1441"> -- Dublin 1</option>
-                    <option value="1442"> -- Dublin 2</option>
-                    <option value="1443"> -- Dublin 3</option>
-                    <option value="1444"> -- Dublin 4</option>
-                    <option value="1445"> -- Dublin 5</option>
-                    <option value="1446"> -- Dublin 6</option>
-                    <option value="1447"> -- Dublin 6W</option>
-                    <option value="1448"> -- Dublin 7</option>
-                    <option value="1449"> -- Dublin 8</option>
-                    <option value="1450"> -- Dublin 9</option>
-                    <option value="1451"> -- Dublin 10</option>
-                    <option value="1452"> -- Dublin 11</option>
-                    <option value="1453"> -- Dublin 12</option>
-                    <option value="1454"> -- Dublin 13</option>
-                    <option value="1455"> -- Dublin 14</option>
-                    <option value="1456"> -- Dublin 15</option>
-                    <option value="1457"> -- Dublin 16</option>
-                    <option value="1458"> -- Dublin 17</option>
-                    <option value="1459"> -- Dublin 18</option>
-                    <option value="1460"> -- Dublin 20</option>
-                    <option value="1461"> -- Dublin 22</option>
-                    <option value="1462"> -- Dublin 24</option>
-                    <option value="1365"> -- Dublin North</option>
-                    <option value="1406"> -- Dublin South</option>
-                    <option value="1463"> -- Dublin County</option>
-                    <option value="4610"> -- North County Dublin</option>
-                    <option value="4611"> -- South County Dublin</option>
-                    <option value="1430"> -- Dublin West</option>
-                    <option value="2013">Galway</option>
-                    <option value="2035"> -- Galway City</option>
-                    <option value="2448">Kerry</option>
-                    <option value="2362">Kildare</option>
-                    <option value="2414">Kilkenny</option>
-                    <option value="2670">Laois</option>
-                    <option value="2648">Leitrim</option>
-                    <option value="2594">Limerick</option>
-                    <option value="4155"> -- Limerick City</option>
-                    <option value="2515">Longford</option>
-                    <option value="2535">Louth</option>
-                    <option value="2781">Mayo</option>
-                    <option value="2712">Meath</option>
-                    <option value="2771">Monaghan</option>
-                    <option value="2888">Offaly</option>
-                    <option value="3091">Roscommon</option>
-                    <option value="3254">Sligo</option>
-                    <option value="3587">Tipperary</option>
-                    <option value="3944">Waterford</option>
-                    <option value="3969">Westmeath</option>
-                    <option value="4054">Wexford</option>
-                    <option value="4011">Wicklow</option>
-                </select>
-
-                <button type="submit" id="calculate" disabled class="disabled">Calculate</button>
-
-            </div>
-
-            <div id="calculator-results">
-
-                <strong>Property Value:</strong> <span id="property-value"></span><br />
-                <strong>Mortgage Value:</strong> <span id="mortgage-value"></span><br />
-                <strong>Deposit Amount:</strong> <span id="deposit-amount"></span><br />
-                <strong>Product:</strong> <span>First Time Buyer,<br/> Variable LTV > 50% <= 75%</span><br />
-                <strong>Annual Percentage Rate (APR):</strong> <span>4.40%</span><br />
-
-                <div id="properties">
-                    <ul></ul>
-                </div>
-
-                <button id="recalculate">Recalculate</button>
-
-            </div>
-
-        </div>
+		<link href="css/min/minified.css" type="text/css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+	</head>
 
 
-        <script src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>
-        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="js/min/minified.js"></script>
+	<body>
 
-    </body>
+		<div id="mpu-wrapper">
+
+			<div id="bg-exit"></div> <!-- to be replaced -->
+
+			<div id="header">
+				<img alt="Mortgage Store" title="Mortgage Store" src="images_mpu/header.jpg" />
+			</div> <!-- header -->
+
+			<div id="calculator-form">
+
+				<label for="select-rent">My monthly rent is</label>
+				<select id="select-rent">
+					<option>Select an amount</option>
+					<option value="300">&euro;300</option>
+					<option value="400">&euro;400</option>
+					<option value="500">&euro;500</option>
+					<option value="600">&euro;600</option>
+					<option value="700">&euro;700</option>
+					<option value="800">&euro;800</option>
+					<option value="900">&euro;900</option>
+					<option value="1000">&euro;1,000</option>
+					<option value="1100">&euro;1,100</option>
+					<option value="1200">&euro;1,200</option>
+					<option value="1300">&euro;1,300</option>
+					<option value="1400">&euro;1,400</option>
+					<option value="1500">&euro;1,500</option>
+					<option value="1600">&euro;1,600</option>
+					<option value="1700">&euro;1,700</option>
+					<option value="1800">&euro;1,800</option>
+					<option value="1900">&euro;1,900</option>
+					<option value="2000">&euro;2,000</option>
+					<option value="2100">&euro;2,100</option>
+					<option value="2200">&euro;2,200</option>
+					<option value="2300">&euro;2,300</option>
+					<option value="2400">&euro;2,400</option>
+					<option value="2500">&euro;2,500</option>
+					<option value="2600">&euro;2,600</option>
+					<option value="2700">&euro;2,700</option>
+					<option value="2800">&euro;2,800</option>
+					<option value="2900">&euro;2,900</option>
+					<option value="3000">&euro;3,000</option>
+				</select>
+
+				<label for="select-area">I'd like to live in</label>
+				<select id="select-area" name="select-area"><option value="">Choose a County</option>
+					<option value="1080">Carlow</option>
+					<option value="887">Cavan</option>
+					<option value="618">Clare</option>
+					<option value="737">Cork</option>
+					<option value="769"> -- Cork City</option>
+					<option value="4243"> -- Cork West</option>
+					<option value="1464">Donegal</option>
+					<option value="1265">Dublin</option>
+					<option value="1441"> -- Dublin 1</option>
+					<option value="1442"> -- Dublin 2</option>
+					<option value="1443"> -- Dublin 3</option>
+					<option value="1444"> -- Dublin 4</option>
+					<option value="1445"> -- Dublin 5</option>
+					<option value="1446"> -- Dublin 6</option>
+					<option value="1447"> -- Dublin 6W</option>
+					<option value="1448"> -- Dublin 7</option>
+					<option value="1449"> -- Dublin 8</option>
+					<option value="1450"> -- Dublin 9</option>
+					<option value="1451"> -- Dublin 10</option>
+					<option value="1452"> -- Dublin 11</option>
+					<option value="1453"> -- Dublin 12</option>
+					<option value="1454"> -- Dublin 13</option>
+					<option value="1455"> -- Dublin 14</option>
+					<option value="1456"> -- Dublin 15</option>
+					<option value="1457"> -- Dublin 16</option>
+					<option value="1458"> -- Dublin 17</option>
+					<option value="1459"> -- Dublin 18</option>
+					<option value="1460"> -- Dublin 20</option>
+					<option value="1461"> -- Dublin 22</option>
+					<option value="1462"> -- Dublin 24</option>
+					<option value="1365"> -- Dublin North</option>
+					<option value="1406"> -- Dublin South</option>
+					<option value="1463"> -- Dublin County</option>
+					<option value="4610"> -- North County Dublin</option>
+					<option value="4611"> -- South County Dublin</option>
+					<option value="1430"> -- Dublin West</option>
+					<option value="2013">Galway</option>
+					<option value="2035"> -- Galway City</option>
+					<option value="2448">Kerry</option>
+					<option value="2362">Kildare</option>
+					<option value="2414">Kilkenny</option>
+					<option value="2670">Laois</option>
+					<option value="2648">Leitrim</option>
+					<option value="2594">Limerick</option>
+					<option value="4155"> -- Limerick City</option>
+					<option value="2515">Longford</option>
+					<option value="2535">Louth</option>
+					<option value="2781">Mayo</option>
+					<option value="2712">Meath</option>
+					<option value="2771">Monaghan</option>
+					<option value="2888">Offaly</option>
+					<option value="3091">Roscommon</option>
+					<option value="3254">Sligo</option>
+					<option value="3587">Tipperary</option>
+					<option value="3944">Waterford</option>
+					<option value="3969">Westmeath</option>
+					<option value="4054">Wexford</option>
+					<option value="4011">Wicklow</option>
+				</select>
+
+				<button type="submit" id="calculate" disabled class="disabled">Calculate</button>
+
+			</div>
+
+			<div id="calculator-results">
+
+				<strong>Property Value:</strong> <span id="property-value"></span><br />
+				<strong>Mortgage Value:</strong> <span id="mortgage-value"></span><br />
+				<strong>Deposit Amount:</strong> <span id="deposit-amount"></span><br />
+				<strong>Product:</strong> <span>First Time Buyer,<br/> Variable LTV > 50% <= 75%</span><br />
+				<strong>Annual Percentage Rate (APR):</strong> <span>4.40%</span><br />
+
+				<div id="properties">
+					<ul></ul>
+				</div>
+
+				<button id="recalculate">Recalculate</button>
+
+			</div>
+
+		</div>
+
+
+		<script src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="js/min/minified.js"></script>
+
+	</body>
 </html>

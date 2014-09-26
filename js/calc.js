@@ -234,8 +234,8 @@ function enablerInitHandler() {
 
         // Switch back to calculation form when user clicks #recalculate
         $('#recalculate').click(function() {
-            $('#properties ul').html('');
             $('#calculator-results').fadeOut(function() {
+                $('#properties ul').html('');
                 $('#calculator-form').fadeIn();
             });
         });
