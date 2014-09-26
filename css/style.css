@@ -134,3 +134,10 @@ button {
 	background-color: #99c309;
 	font-size: 18px;
 }
+
+button.disabled {
+    background-color: silver;
+    color: grey;
+    border-color: grey;
+    cursor: default;
+}

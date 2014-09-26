@@ -1,5 +1,6 @@
 var api_key = '3AB90338-FFC9-497D-BFD0-8043C92E0B45';
 var api_base = 'http://www.myhome.ie/api/v3/';
+var prop_url = 'http://property.mortgagestore.ie/';  // + PropertyID
 
 
 // Property Prices
@@ -154,6 +155,21 @@ if (Enabler.isInitialized()) {
 }
 
 
+// Utility function to add commas to numbers
+function addCommas(nStr)
+{
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+}
+
+
 function enablerInitHandler() {
     // Start ad, initialize animation,
     // load in your image assets, call Enabler methods,
@@ -162,19 +178,29 @@ function enablerInitHandler() {
     // jQuery...
     $(function() {
 
+        var rent, area;
+
+        // Hide the results display initially
         $('#calculator-results').hide();
 
-        // Fetch list of properties from MyHome when user clicks #calculate button
-        $('#calculate').click(function(e) {
+        // Activate the calculate button when both fields have values
+        $('#select-rent, #select-area').change(function() {
             rent = $('#select-rent').val();
             area = $('#select-area').val();
 
+            if (rent && area) {
+                $('#calculate').removeClass('disabled').removeAttr('disabled');
+            }
+        });
+
+        // Fetch list of properties from MyHome when user clicks #calculate button
+        $('#calculate').click(function(e) {
             // Only continue if values have been selected
             if (rent && area) {
                 var price = prices[rent];
-                $('#mortgage-value').html(price.mortgageAmount);
-                $('#property-value').html(price.maxPurchase);
-                $('#deposit-amount').html(price.depositAmount);
+                $('#mortgage-value').html('&euro;' + addCommas(price.mortgageAmount));
+                $('#property-value').html('&euro;' + addCommas(price.maxPurchase));
+                $('#deposit-amount').html('&euro;' + addCommas(price.depositAmount));
 
                 $.getJSON( api_base + 'search?callback=?', {
                     apiKey: api_key,
@@ -190,8 +216,11 @@ function enablerInitHandler() {
 
                     console.log(data);
 
-                    $.each(data.Properties, function(prop) {
-                        $('#properties ul').append('<img src="' + prop.MainPhotoUrl +'" />');
+                    var i = 0;
+                    $.each(data.Properties, function(key, prop) {
+                        if (i == 4) { return false; } i += 1;
+                        console.log(prop);
+                        $('#properties ul').append('<a href="' + prop_url + prop.PropertyID + '"><img src="' + prop.MainPhotoUrl +'" /><span class="property_view">View</span><span class="property_price">' + prop.Price + '</span></a>');
                     });
 
                     $('#calculator-form').fadeOut(function() {
@@ -205,7 +234,7 @@ function enablerInitHandler() {
 
         // Switch back to calculation form when user clicks #recalculate
         $('#recalculate').click(function() {
-            $('#properties').html('');
+            $('#properties ul').html('');
             $('#calculator-results').fadeOut(function() {
                 $('#calculator-form').fadeIn();
             });

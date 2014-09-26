@@ -22,7 +22,7 @@
 
                 <label for="select-rent">My monthly rent is</label>
                 <select id="select-rent">
-                    <option></option>
+                    <option>Select an amount</option>
                     <option value="300">&euro;300</option>
                     <option value="400">&euro;400</option>
                     <option value="500">&euro;500</option>
@@ -115,11 +115,12 @@
                     <option value="4011">Wicklow</option>
                 </select>
 
-                <button type="submit" id="calculate">Calculate</button>
+                <button type="submit" id="calculate" disabled class="disabled">Calculate</button>
 
             </div>
 
             <div id="calculator-results">
+
                 <strong>Property Value:</strong> <span id="property-value"></span><br />
                 <strong>Mortgage Value:</strong> <span id="mortgage-value"></span><br />
                 <strong>Deposit Amount:</strong> <span id="deposit-amount"></span><br />
