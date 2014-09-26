@@ -1,29 +1,152 @@
 <html>
 
-    <head>
-        <title>Mortgage Store</title>
-
-        <link href="css/min/minified.css" type="text/css" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-    </head>
-
-
-    <body>
-
-        <div id="mast-wrapper">
-
-            <div id="bg-exit"></div> <!-- to be replaced -->
+<head>
+	<title>Mortgage Store</title>
+	
+	<link href="css/min/minified.css" type="text/css" rel="stylesheet" />
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+</head>
 
 
-            <div id="header">
-                <img alt="Mortgage Store" title="Mortgage Store" src="images/header.jpg" />
-            </div> <!-- header -->
+<body>
+	
+		<div id="mast-wrapper">
+			
+			<div id="bg-exit"></div> <!-- to be replaced -->
+			
+			<div id="header">
+				<img alt="Mortgage Store" title="Mortgage Store" src="images/min/header.jpg" />
+			</div> <!-- header -->
+			
+			<div class="content">
+				<div class="left-side">
+					<div class="left heading">
+						<img src="images/min/calc-icon.png" /> 
+						<h3>Mortgage Calculator</h3>
+					</div>
 
-        </div>
+					<div id="my-monthly-rent" class="left">
+						<p>My monthly rent is</p>
+						<p>
+							<select id="rent" name="rent">
+								<option value="300">€300</option>
+								<option value="400">€400</option>
+								<option value="500">€500</option>
+								<option value="600">€600</option>
+								<option value="700">€700</option>
+								<option value="800">€800</option>
+								<option value="900">€900</option>
+								<option value="1000">€1,000</option>
+								<option value="1100">€1,100</option>
+								<option value="1200">€1,200</option>
+								<option value="1300">€1,300</option>
+								<option value="1400">€1,400</option>
+								<option value="1500">€1,500</option>
+								<option value="1600">€1,600</option>
+								<option value="1700">€1,700</option>
+								<option value="1800">€1,800</option>
+								<option value="1900">€1,900</option>
+								<option value="2000">€2,000</option>
+								<option value="2100">€2,100</option>
+								<option value="2200">€2,200</option>
+								<option value="2300">€2,300</option>
+								<option value="2400">€2,400</option>
+								<option value="2500">€2,500</option>
+								<option value="2600">€2,600</option>
+								<option value="2700">€2,700</option>
+								<option value="2800">€2,800</option>
+								<option value="2900">€2,900</option>
+								<option value="3000">€3,000</option>
+							</select>
+						</p>
+					</div>
+					
+					<div id="id-like-to-live-in" class="left">
+						<p>I'd like to live in</p>
+						<select id="Region" name="Region">
+							<option value="">Choose a Location</option>
+							<option value="1080">Carlow</option>
+							<option value="887">Cavan</option>
+							<option value="618">Clare</option>
+							<option value="737">Cork</option>
+							<option value="769">Cork City</option>
+							<option value="4243">Cork West</option>
+							<option value="1464">Donegal</option>
+							<option value="1265">Dublin</option>
+							<option value="1441">Dublin 1</option>
+							<option value="1442">Dublin 2</option>
+							<option value="1443">Dublin 3</option>
+							<option value="1444">Dublin 4</option>
+							<option value="1445">Dublin 5</option>
+							<option value="1446">Dublin 6</option>
+							<option value="1447">Dublin 6W</option>
+							<option value="1448">Dublin 7</option>
+							<option value="1449">Dublin 8</option>
+							<option value="1450">Dublin 9</option>
+							<option value="1451">Dublin 10</option>
+							<option value="1452">Dublin 11</option>
+							<option value="1453">Dublin 12</option>
+							<option value="1454">Dublin 13</option>
+							<option value="1455">Dublin 14</option>
+							<option value="1456">Dublin 15</option>
+							<option value="1457">Dublin 16</option>
+							<option value="1458">Dublin 17</option>
+							<option value="1459">Dublin 18</option>
+							<option value="1460">Dublin 20</option>
+							<option value="1461">Dublin 22</option>
+							<option value="1462">Dublin 24</option>
+							<option value="1365">Dublin North</option>
+							<option value="1406">Dublin South</option>
+							<option value="1463">Dublin County</option>
+							<option value="4610">North County Dublin</option>
+							<option value="4611">South County Dublin</option>
+							<option value="1430">Dublin West</option>
+							<option value="2013">Galway</option>
+							<option value="2035">Galway City</option>
+							<option value="2448">Kerry</option>
+							<option value="2362">Kildare</option>
+							<option value="2414">Kilkenny</option>
+							<option value="2670">Laois</option>
+							<option value="2648">Leitrim</option>
+							<option value="2594">Limerick</option>
+							<option value="4155">Limerick City</option>
+							<option value="2515">Longford</option>
+							<option value="2535">Louth</option>
+							<option value="2781">Mayo</option>
+							<option value="2712">Meath</option>
+							<option value="2771">Monaghan</option>
+							<option value="2888">Offaly</option>
+							<option value="3091">Roscommon</option>
+							<option value="3254">Sligo</option>
+							<option value="3587">Tipperary</option>
+							<option value="3944">Waterford</option>
+							<option value="3969">Westmeath</option>
+							<option value="4054">Wexford</option>
+							<option value="4011">Wicklow</option>
+						</select>
+					</div> <!-- id like to live in -->
+					
+					<div class="clear">
+						<button class="right" type="button">Calculate</button>
+						<p class="grey-text">Calculator results are indicative and do not constitute a loan offer.</p>
+					</div>
+				</div> <!-- left side -->
+				
+				<div class="right-side">
+					<div id="vid_container">
+						<img src="images/min/video-border.png">
+						<iframe id="video" width="254" height="138" src="//www.youtube.com/embed/9zwweNfAhvE" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div> <!-- right side -->
+			</div>
+			
+		</div>
+	
+</body>
 
+<script src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>
+<script src="js/min/minified.js"></script>
 
-        <script src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>
-        <script src="js/min/minified.js"></script>
-
-    </body>
 </html>
+
