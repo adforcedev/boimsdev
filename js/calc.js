@@ -1,6 +1,3 @@
-var api_key = '3AB90338-FFC9-497D-BFD0-8043C92E0B45';
-var api_base = 'http://www.myhome.ie/api/v3/';
-var prop_url = 'http://property.mortgagestore.ie/';  // + PropertyID
 
 
 // Property Prices
@@ -174,10 +171,74 @@ function enablerInitHandler() {
     // Start ad, initialize animation,
     // load in your image assets, call Enabler methods,
     // and/or include other Studio modules.
+}
 
-    // jQuery...
+
+// If true, start function. If false, listen for PAGE_LOADED.
+if (Enabler.isPageLoaded()) {
+    pageLoadedHandler();
+} else {
+    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
+pageLoadedHandler);
+}
+
+function pageLoadedHandler() {
+    // Load in additional assets or add animation/video
+    var fileref=document.createElement("link");
+    var filename = 'http://fonts.googleapis.com/css?family=Lato:400,700';
+        fileref.setAttribute("rel", "stylesheet");
+        fileref.setAttribute("type", "text/css");
+        fileref.setAttribute("href", filename);
+        document.getElementsByTagName('head')[0].appendChild(fileref);
+
+    fileref=document.createElement("script");
+    filename = '//code.jquery.com/jquery-1.11.0.min.js';
+        fileref.setAttribute("src", filename);
+        document.getElementsByTagName('head')[0].appendChild(fileref);
+
+}
+
+
+//If true, start function. If false, listen for VISIBLE.
+if (Enabler.isVisible()) {
+      adVisibilityHandler();
+} else {
+Enabler.addEventListener(studio.events.StudioEvent.VISIBLE,
+adVisibilityHandler);
+}
+
+function adVisibilityHandler() {
+    // Load in additional assets or start the animation/video
+}
+
+
+function bgExitHandler(e) {
+	Enabler.exitOverride('Background Exit', 'http://www.mortgagestore.ie');
+}
+
+document.getElementById('bg-exit').addEventListener('click', bgExitHandler, false);
+
+
+//
+// jQuery...
+//
+
+// Defer method waits until jQuery is loaded (by pageLoadedHandler)
+function defer(method) {
+    if (window.$) {
+        method();
+    }
+    else {
+        setTimeout(function() { defer(method); }, 50);
+    }
+}
+
+defer(function () {
     $(function() {
 
+        var api_key = '3AB90338-FFC9-497D-BFD0-8043C92E0B45';
+        var api_base = 'http://www.myhome.ie/api/v3/';
+        var prop_url = 'http://property.mortgagestore.ie/';  // + PropertyID
         var rent, area;
 
         // Activate the calculate button when both fields have values
@@ -200,15 +261,15 @@ function enablerInitHandler() {
                 $('#deposit-amount').html('&euro;' + addCommas(price.depositAmount));
 
                 $.getJSON( api_base + 'search?callback=?', {
-                    apiKey: api_key,
-                    format: 'json',
-                    Page: '1',
-                    PageSize: '4',
-                    SortColumn: 'Price',
-                    SortDirection: 'desc',
-                    MaxPrice: price.maxPurchase,
-                    LocalityIds: area,
-                    PropertyClassIDs: 1
+                    apiKey           : api_key,
+                    format           : 'json',
+                    Page             : '1',
+                    PageSize         : '4',
+                    SortColumn       : 'Price',
+                    SortDirection    : 'desc',
+                    MaxPrice         : price.maxPurchase,
+                    LocalityIds      : area,
+                    PropertyClassIDs : 1
                 }, function( data ) {
 
                     console.log(data);
@@ -238,42 +299,4 @@ function enablerInitHandler() {
         });
 
     });
-}
-
-
-// If true, start function. If false, listen for PAGE_LOADED.
-if (Enabler.isPageLoaded()) {
-    pageLoadedHandler();
-} else {
-    Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
-pageLoadedHandler);
-}
-
-function pageLoadedHandler() {
-    // Load in additional assets or add animation/video
-		var fileref=document.createElement("link");
-		var filename = 'http://fonts.googleapis.com/css?family=Lato:400,700';
-		fileref.setAttribute("rel", "stylesheet");
-		fileref.setAttribute("type", "text/css");
-		fileref.setAttribute("href", filename);
-}
-
-
-//If true, start function. If false, listen for VISIBLE.
-if (Enabler.isVisible()) {
-      adVisibilityHandler();
-} else {
-Enabler.addEventListener(studio.events.StudioEvent.VISIBLE,
-adVisibilityHandler);
-}
-
-function adVisibilityHandler() {
-    // Load in additional assets or start the animation/video
-}
-
-
-function bgExitHandler(e) {
-	Enabler.exitOverride('Background Exit', 'http://www.mortgagestore.ie');
-}
-
-document.getElementById('bg-exit').addEventListener('click', bgExitHandler, false);
+});
