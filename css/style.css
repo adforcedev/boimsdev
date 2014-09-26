@@ -12,6 +12,14 @@
     position: relative;
 }
 
+#mpu-wrapper {
+    width: 400px;
+    height: 250px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
 
 
 #bg-exit {
