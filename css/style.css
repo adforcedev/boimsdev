@@ -45,7 +45,7 @@ html {
 }
 
 .left-side {
-	width: 420px;
+	width: 400px;
 	float: left;
 	height: 205px;
 	padding-left: 25px;
@@ -58,7 +58,9 @@ html {
 }
 
 .left-side h3 {
-	display: inline;
+	display: inline-block;
+	position: relative;
+	top: -17px;
 }
 
 .left {
@@ -89,11 +91,13 @@ h3 {
 	font-weight: 700;
 }
 
-#vid_container {
+#vid-container {
 	position: relative;
+	width: 267px;
+	float: left;
 }
 
-#vid_border {
+#vid-border {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -124,5 +128,20 @@ button {
 	color: white;
 	text-align: center;
 	background-color: #99c309;
-	font-size: 18px;
+	font-size: 16px;
+	-webkit-box-shadow: 0px 5px 12px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 5px 12px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 5px 12px 0px rgba(50, 50, 50, 0.5);
+}
+
+.watch-vid, .visit-ms {
+	height: 50px;
+	width: 154px;
+	padding: 5px;
+	line-height: 17px;
+
+}
+
+.visit-ms {
+	background: #636250;
 }
